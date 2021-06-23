@@ -3,6 +3,7 @@ import Button from "../Form/formbut";
 import Ussd from "./style";
 import Loader from "../Loader";
 import { PaymentContext } from "../context/index";
+import { paymentFormular } from "../paymentFormula";
 
 const USSD = () => {
   const {paymentState} = useContext(PaymentContext);
@@ -86,7 +87,8 @@ const USSD = () => {
       </select>
             {showData &&(
                 <div>
-                    <Button amount={paymentState?.amount || 0}/>
+                    <Button amount={parseInt(paymentState?.amount) || 0  + parseInt(paymentFormular(paymentState?.amount, "card")?.totalCharges -
+            paymentState?.amount)} >Copy</Button>
                     
                 </div>
             )}

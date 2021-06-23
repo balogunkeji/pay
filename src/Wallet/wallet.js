@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import Wallets from './style'
 import Button from '../Form/formbut';
 import { PaymentContext } from "../context/index";
-// import { paymentFormular } from "../paymentFormula";
+import { paymentFormular } from "../paymentFormula";
 
 const Wallet = () => {
     const {paymentState} = useContext(PaymentContext);
@@ -32,7 +32,8 @@ const Wallet = () => {
             onChange={handleOnChange}
             placeholder='pp7039518150'
             />
-            <Button amount={paymentState?.amount || 0} />
+            <Button amount={parseInt(paymentState?.amount)   + parseInt(paymentFormular(paymentState?.amount, "wallet")?.totalCharges -
+            paymentState?.amount)} />
         </form>
             </div>
         </Wallets>

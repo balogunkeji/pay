@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from 'react';
 import { PaymentContext } from '../context/index';
 import Button from '../Form/formbut';
-import Banks from './style'
+import Banks from './style';
+import { paymentFormular } from "../paymentFormula";
 
 
 const Bank = () => {
@@ -71,7 +72,9 @@ const Bank = () => {
                         placeholder='Enter your account details'
                         onChange={onChange}
                     />
-                    <Button amount={paymentState?.amount || 0}>Submit</Button>
+                
+                <Button amount={parseInt(paymentState?.amount)   + parseInt(paymentFormular(paymentState?.amount, "bank")?.totalCharges -
+            paymentState?.amount)}> Submit</Button>
                     {/* {errorMessage && <div className="error"> {errorMessage} </div>} */}
                 </form>
             )}

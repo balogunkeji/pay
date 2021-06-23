@@ -7,16 +7,7 @@ import { paymentFormular } from "../paymentFormula";
 const Card = () => {
   const { paymentState } = useContext(PaymentContext);
   const [cards, setCards] = useState({ number: "", expiry: "", cvc: "" });
-  const [paymentContext, setPaymentContext] = useState();
-
-  useEffect(() => {
-    setPaymentContext({
-      ...PaymentContext,
-      channel: "card",
-      processingFee: paymentFormular(PaymentContext?.amount, "card")
-        ?.totalCharges,
-    });
-  }, [paymentContext]);
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,7 +65,8 @@ const Card = () => {
             />
           </div>
         </div>
-        <Button amount={paymentState?.amount} />
+        <Button amount={parseInt(paymentState?.amount)   + parseInt(paymentFormular(paymentState?.amount, "card")?.totalCharges -
+            paymentState?.amount)} />
       </div>
     </Cards>
   );
