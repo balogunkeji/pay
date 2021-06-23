@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext} from "react";
 import Cards from "./style";
 import Button from "../Form/formbut";
 import { PaymentContext } from "../context/index";

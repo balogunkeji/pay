@@ -24,7 +24,6 @@ const Bank = () => {
   const [render, setRender] = useState(null);
   const [showData, setShowData] = useState(false);
   const [num, setNum] = useState({ number: "" });
-  const [errorMessage, setErrorMessage] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
