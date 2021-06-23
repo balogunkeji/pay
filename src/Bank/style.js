@@ -57,7 +57,7 @@ form {
 
     input {
         background:#f2f2f2;
-      padding: 15px 30px;
+      padding: 15px 20px;
       outline: none;
       border: none;
       border-radius: 20px;
