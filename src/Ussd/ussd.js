@@ -87,8 +87,8 @@ const USSD = () => {
       </select>
             {showData &&(
                 <div>
-                    <Button amount={parseInt(paymentState?.amount) || 0  + parseInt(paymentFormular(paymentState?.amount, "card")?.totalCharges -
-            paymentState?.amount)} >Copy</Button>
+                    <Button amount={parseInt(paymentState?.amount)   + parseInt(paymentFormular(paymentState?.amount, "ussd")?.totalCharges -
+            paymentState?.amount)}/>
                     
                 </div>
             )}
