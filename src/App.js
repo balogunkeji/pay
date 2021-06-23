@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from './Form/form';
+import Payment from './Payment/payment';
+import {Route, Switch} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Switch>
+        <Route path="/" exact component={Form} />
+        <Route path="/payment/card" exact  component={Payment} />
+        <Route path="/payment/ussd"   component={Payment} />
+        <Route path="/payment/bank"   component={Payment} />
+        <Route path="/payment/wallet"   component={Payment} />
+      </Switch>
     </div>
   );
 }
 
 export default App;
+ 
+

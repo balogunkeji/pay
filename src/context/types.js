@@ -1,0 +1,4 @@
+export const SET_PAYMENT = 'SET_PAYMENT';
+export const SET_AMOUNT = 'SET_AMOUNT';
+export const SET_CHANNEL = 'SET_CHANNEL';
+export const SET_PROCESSING_FEE = 'SET_PROCESSING_FEE';

@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router} from "react-router-dom";
+// import ContextProvider from './Context';
+import { PaymentContextProvider } from '../src/context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <PaymentContextProvider>
+    <Router>
+     <App />
+    </Router>
+    </PaymentContextProvider>
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
