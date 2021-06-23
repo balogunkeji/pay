@@ -36,7 +36,7 @@ const Form = () => {
     <FormData onSubmit={handleSubmit} >
         <div className='header'>
           <img src={Group} alt ='group'/>
-          <h4>BY NASKKO TECH</h4>
+          <h4>Pushpay</h4>
         </div>
       <div  className='form'>
       <div className="name">

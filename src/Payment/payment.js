@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Push from "../Payment/pushpay.svg";
 import Card from "../Card/card";
 import USSD from "../Ussd/ussd";
@@ -12,33 +12,56 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { paymentFormular } from "../paymentFormula";
 import { PaymentContext } from "../context";
 
-
 const Payment = () => {
-  const {paymentState} = useContext(PaymentContext);
+  const { paymentState } = useContext(PaymentContext);
   const routes = [
     {
       path: "/payment/card",
       exact: true,
-      sidebar: () => <p>NGN {paymentFormular(paymentState?.amount, 'card')?.pushpayCharge}</p>,
+      sidebar: () => (
+        <p>
+          NGN{" "}
+          {paymentFormular(paymentState?.amount, "card")?.totalCharges -
+            paymentState?.amount}
+        </p>
+      ),
       main: () => <Card />,
     },
     {
       path: "/payment/ussd",
-      sidebar: () => <p>NGN {paymentFormular(paymentState?.amount, 'ussd')?.pushpayCharge}</p>,
+      sidebar: () => (
+        <p>
+          NGN{" "}
+          {paymentFormular(paymentState?.amount, "ussd")?.totalCharges -
+            paymentState?.amount}
+        </p>
+      ),
       main: () => <USSD />,
     },
     {
       path: "/payment/bank",
-      sidebar: () => <p>NGN {paymentFormular(paymentState?.amount, 'bank')?.pushpayCharge}</p>,
+      sidebar: () => (
+        <p>
+          NGN{" "}
+          {paymentFormular(paymentState?.amount, "bank")?.totalCharges -
+            paymentState?.amount}
+        </p>
+      ),
       main: () => <Bank />,
     },
     {
       path: "/payment/wallet",
-      sidebar: () => <p>NGN {paymentFormular(paymentState?.amount, 'wallet')?.pushpayCharge}</p>,
+      sidebar: () => (
+        <p>
+          NGN{" "}
+          {paymentFormular(paymentState?.amount, "wallet")?.totalCharges -
+            paymentState?.amount}
+        </p>
+      ),
       main: () => <Wallet />,
     },
   ];
-  
+
   return (
     <Pay className="pay">
       <Router>
