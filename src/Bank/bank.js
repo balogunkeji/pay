@@ -24,7 +24,7 @@ const Bank = () => {
     const [render, setRender] = useState(null)
     const [showData, setShowData] = useState(false)
     const [num,setNum] = useState({number:""})
-    // const [errorMessage,setErrorMessage] = useState()
+    const [errorMessage,setErrorMessage] = useState()
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -43,8 +43,7 @@ const Bank = () => {
     useEffect(() => {
         if (render !== null) {
             setShowData(true)
-        }else if(render === null || render === ''){
-            setShowData(false)
+            console.log(render)
         }
     }, [render])
 

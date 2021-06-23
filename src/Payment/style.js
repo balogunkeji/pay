@@ -117,6 +117,12 @@ const Pay = styled.div`
       width: 100%;
 
     }
+
+    @media screen and (min-width: 481px) and (max-width: 800px){
+      margin: 70px auto auto auto;
+      width: 100%;
+
+    }
   }
 `;
 export default Pay;
