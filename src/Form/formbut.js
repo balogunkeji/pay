@@ -18,8 +18,8 @@ const Button = ({disabled, amount = 0}) => {
 
   return ( 
     <Buttons onClick={fetchData} disabled={amount === 0 ? true : false} onSubmit={handleSubmit} >
-      {isLoading && <span>Loading.....</span>}
-      {!isLoading &&  <span> {`Pay NGN ${amount || 0}`}</span>}
+      {!isLoading && <span> {`Pay NGN ${amount || 0}`}</span>}
+      {isLoading &&  <span>Loading......</span>}
     </Buttons>
     
   );
