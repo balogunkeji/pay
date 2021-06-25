@@ -9,7 +9,7 @@ import {SET_AMOUNT} from "../context/types";
 
 const Form = () => {
   const history = useHistory()
-  const context = useContext(PaymentContext);
+  // const context = useContext(PaymentContext);
   const {dispatch} = useContext(PaymentContext);
   const [form, setForm] = useState({ fname: "", lname: "", email: "" ,amount: '' });
 

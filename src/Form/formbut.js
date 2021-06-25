@@ -1,4 +1,4 @@
- import { useState } from "react";
+ import { useState, useEffect } from "react";
 // import Loader from "react-spinners/BarLoader";
 import styled from "styled-components";
 
@@ -10,14 +10,16 @@ const Button = ({disabled, amount = 0}) => {
        setIsLoading(true)
      };
 
-  const fetchData = () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  };
+  useEffect(() => {
+      setTimeout(() => {
+        if(!isLoading){
+          setIsLoading(true)
+        }setIsLoading(false)
+      }, 5000);
+  }, [isLoading])
 
   return ( 
-    <Buttons onClick={fetchData} disabled={amount === 0 ? true : false} onSubmit={handleSubmit} >
+    <Buttons onClick={setIsLoading} disabled={amount === 0 ? true : false} onSubmit={handleSubmit} >
       {!isLoading && <span> {`Pay NGN ${amount || 0}`}</span>}
       {isLoading &&  <span>Loading......</span>}
     </Buttons>
