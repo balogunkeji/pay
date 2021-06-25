@@ -52,7 +52,7 @@ const USSD = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (render != null) {
+      if (render !== null) {
         setShowData(true);
       }
       setIsLoading(false);
