@@ -12,14 +12,12 @@ const Button = ({disabled, amount = 0}) => {
 
   useEffect(() => {
       setTimeout(() => {
-        if(!isLoading){
-          setIsLoading(true)
-        }setIsLoading(false)
+        setIsLoading(false)
       }, 5000);
   }, [isLoading])
 
   return ( 
-    <Buttons onClick={setIsLoading} disabled={amount === 0 ? true : false} onSubmit={handleSubmit} >
+    <Buttons onClick={() => setIsLoading(!isLoading)} disabled={amount === 0 ? true : false} onSubmit={handleSubmit} >
       {!isLoading && <span> {`Pay NGN ${amount || 0}`}</span>}
       {isLoading &&  <span>Loading......</span>}
     </Buttons>

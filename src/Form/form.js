@@ -18,7 +18,6 @@ const Form = () => {
     dispatch({type: SET_AMOUNT, payload: form?.amount})
     
     history.push('/payment/card')
-    history.go(0)
     console.log(form);
     setForm({
       fname: "",
