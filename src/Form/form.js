@@ -3,13 +3,11 @@ import FormData from "./style";
 import Group from '../Form/group.svg';
 import Button from "./formbut";
 import { useHistory } from "react-router-dom";
-// import { CartContext } from "../Context";
 import {PaymentContext} from "../context/index";
 import {SET_AMOUNT} from "../context/types";
 
 const Form = () => {
   const history = useHistory()
-  // const context = useContext(PaymentContext);
   const {dispatch} = useContext(PaymentContext);
   const [form, setForm] = useState({ fname: "", lname: "", email: "" ,amount: '' });
 

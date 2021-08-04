@@ -38,14 +38,18 @@ const Cards = styled.div`
 
     input {
         background:#f2f2f2;
-      padding: 10px 12px;
+      padding: 15px;
       outline: none;
       border: none;
       border-radius: 20px;
       margin-bottom: 20px;
       max-width: 100%;
       width: 80%;
-      font-size: 10px;
+      font-size: 14px;
+
+      @media screen and (max-width: 600px) {
+        width: 90%;
+    }
     }
 
     .name {
@@ -64,5 +68,5 @@ const Cards = styled.div`
       }
     }
     }
-`
+`;
 export default Cards;

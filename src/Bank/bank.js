@@ -71,6 +71,7 @@ const Bank = () => {
             onChange={onChange}
           />
 
+
           <Button
             amount={
               parseInt(paymentState?.amount) +

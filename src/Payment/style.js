@@ -32,6 +32,20 @@ const Pay = styled.div`
     overflow: hidden;
   }
 
+  @media screen and (min-width: 601px) and (max-width: 768px){
+    width: 72%;
+    margin: 100px auto;
+    font-size: 16px;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 992px){
+    width: 60%;
+    margin: 100px auto;
+    font-size: 16px;
+    overflow: hidden;
+  }
+
   .side {
     .header {
       line-height: 0.5;
@@ -68,12 +82,6 @@ const Pay = styled.div`
           font-weight: 500px;
           padding: 8px 5px;
           color: #56799d;
-
-          &:hover {
-            color: white;
-            background: #2335ed;
-            border-radius: 10px;
-          }
 
           span {
             margin-left: 5px;
@@ -119,7 +127,7 @@ const Pay = styled.div`
     }
 
     @media screen and (min-width: 481px) and (max-width: 800px){
-      margin: 70px auto auto auto;
+    
       width: 100%;
 
     }

@@ -8,7 +8,7 @@ import Pay from "../Payment/style.js";
 import { AiOutlineCreditCard, AiOutlineBank } from "react-icons/ai";
 import { IoWalletOutline } from "react-icons/io5";
 import { BiHash } from "react-icons/bi";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import { paymentFormular } from "../paymentFormula";
 import { PaymentContext } from "../context";
 
@@ -73,28 +73,44 @@ const Payment = () => {
             <h5>Choose payment method</h5>
             <ul>
               <li>
-                <Link to="/payment/card" className="links">
+                <NavLink to="/payment/card" className="links" activeStyle={{
+                   color: "white",
+                   backgroundColor: "#2335ed",
+                   borderRadius: "10px"
+                }}>
                   <AiOutlineCreditCard />
                   <span>Card</span>
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/payment/ussd" className="links">
+                <NavLink to="/payment/ussd" className="links" activeStyle={{
+                   color: "white",
+                   backgroundColor: "#2335ed",
+                   borderRadius: "10px"
+                }}>
                   <BiHash />
                   <span>USSD</span>
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/payment/bank" className="links">
+                <NavLink to="/payment/bank" className="links" activeStyle={{
+                   color: "white",
+                   backgroundColor: "#2335ed",
+                   borderRadius: "10px"
+                }}>
                   <AiOutlineBank />
                   <span>Bank</span>
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/payment/wallet" className="links">
+                <NavLink to="/payment/wallet" className="links" activeStyle={{
+                   color: "white",
+                   backgroundColor: "#2335ed",
+                   borderRadius: "10px"
+                }}>
                   <IoWalletOutline />
                   <span>PushPay wallet</span>
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
