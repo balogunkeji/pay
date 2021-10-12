@@ -1,5 +1,5 @@
-import Form from './Form/form';
-import Payment from './Payment/payment';
+import Form from './Form/';
+import Payment from './Payment/';
 import {Route, Switch} from "react-router-dom";
 
 function App() {

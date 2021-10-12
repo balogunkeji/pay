@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import Push from "../Payment/pushpay.svg";
-import Card from "../Card/card";
-import USSD from "../Ussd/ussd";
-import Bank from "../Bank/bank";
-import Wallet from "../Wallet/wallet";
-import Pay from "../Payment/style.js";
+import Card from "../Card/index";
+import USSD from "../Ussd/index";
+import Bank from "../Bank/index";
+import Wallet from "../Wallet/index";
+import Pay from "./style.js";
 import { AiOutlineCreditCard, AiOutlineBank } from "react-icons/ai";
 import { IoWalletOutline } from "react-icons/io5";
 import { BiHash } from "react-icons/bi";
